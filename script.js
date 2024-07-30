@@ -26,14 +26,16 @@ let currencyUnits = [
   ['TWENTY', 20],
   ['ONE HUNDRED', 100]
 ];
-sale.addEventListener("click",() => {
+sale.addEventListener("click" ,() => {
   const cashValue = parseFloat(cash.value);
   const changeDue = cashValue - price;
 
   if(cashValue < price){
     alert("Customer does not have enough money to purchase the item") ;
     return;
-  }if (cashValue === price){
+  }
+  
+  if (cashValue === price){
     change.innerText = "No change due - customer paid with exact cash"
     return;
 
